@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sambung Kata - Game Asah Otak & Multiplayer Lokal</title>
-    <meta name="description" content="Download Sambung Kata, game asah otak multiplayer lokal paling seru untuk Android, Windows, dan Linux. Sambungkan kata, uji kreativitasmu!">
-    <meta name="keywords" content="sambung kata, game kata, multiplayer lokal, game android, game windows, game linux, asah otak">
+    <title>Sambung Kata Sakum - Game Asah Otak & Multiplayer Lokal | SAKUM STUDIOS</title>
+    <meta name="description" content="Download Sambung Kata Sakum, game asah otak multiplayer lokal paling seru dari SAKUM STUDIOS. Main bareng teman dalam satu WiFi di Android, Windows, dan Linux!">
+    <meta name="keywords" content="sakum game sambung kata, sakum game, sakum studios game, sambung kata sakum, sambung kata, game kata, multiplayer lokal, game android, game windows, game linux, asah otak">
     <meta name="author" content="SAKUM STUDIOS">
     
     <!-- Favicon -->
@@ -14,18 +14,18 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://sambungkata.sakum.my.id/">
-    <meta property="og:title" content="Sambung Kata - Game Asah Otak & Multiplayer Lokal">
-    <meta property="og:description" content="Main bareng teman dalam satu jaringan WiFi. Download sekarang untuk Android, Windows, dan Linux!">
+    <meta property="og:title" content="Sambung Kata Sakum - Game Asah Otak & Multiplayer Lokal">
+    <meta property="og:description" content="Main bareng teman dalam satu jaringan WiFi. Download sekarang dari SAKUM STUDIOS!">
     <meta property="og:image" content="https://sambungkata.sakum.my.id/assets/logo.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://sambungkata.sakum.my.id/">
-    <meta property="twitter:title" content="Sambung Kata - Game Asah Otak & Multiplayer Lokal">
-    <meta property="twitter:description" content="Main bareng teman dalam satu jaringan WiFi. Download sekarang untuk Android, Windows, dan Linux!">
+    <meta property="twitter:title" content="Sambung Kata Sakum - Game Asah Otak & Multiplayer Lokal">
+    <meta property="twitter:description" content="Main bareng teman dalam satu jaringan WiFi. Download sekarang dari SAKUM STUDIOS!">
     <meta property="twitter:image" content="https://sambungkata.sakum.my.id/assets/logo.png">
 
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
@@ -51,7 +51,7 @@
         <section id="hero">
             <div class="hero-content">
                 <h1 class="animate-text">Sambungkan Kata, <br><span class="gradient-text">Uji Kreativitasmu!</span></h1>
-                <p class="hero-description">Game kata-kata paling menantang yang pernah ada. Tersedia untuk semua platform favoritmu.</p>
+                <p class="hero-description">Game kata-kata paling menantang dari SAKUM STUDIOS. Tersedia untuk semua platform favoritmu.</p>
                 <div class="hero-buttons">
                     <a href="#download" class="btn btn-primary">Download Sekarang</a>
                     <a href="#features" class="btn btn-secondary">Pelajari Lebih Lanjut</a>
@@ -84,30 +84,63 @@
         </section>
 
         <section id="tutorial">
-            <h2 class="section-title">Cara Instalasi</h2>
-            <div class="tutorial-container">
-                <div class="tutorial-step">
-                    <div class="step-icon">1</div>
-                    <div class="step-content">
-                        <h3>Windows</h3>
-                        <p>Download file <code>install.bat</code>, lalu klik kanan dan pilih <strong>"Run as Administrator"</strong> jika diperlukan untuk membuat shortcut.</p>
+            <h2 class="section-title">Panduan Instalasi & Uninstall</h2>
+            <div class="tabs-container">
+                <div class="tabs-header">
+                    <button class="tab-btn active" onclick="openTab(event, 'windows')">Windows</button>
+                    <button class="tab-btn" onclick="openTab(event, 'linux')">Linux</button>
+                    <button class="tab-btn" onclick="openTab(event, 'android')">Android</button>
+                </div>
+
+                <!-- Windows -->
+                <div id="windows" class="tab-content active">
+                    <div class="tutorial-step">
+                        <div class="step-content">
+                            <h3>Install</h3>
+                            <p>Buka PowerShell, lalu jalankan perintah berikut:</p>
+                            <div class="code-block">
+                                <code id="cmd-win-install">irm https://sambungkata.sakum.my.id/app/installer/install.ps1 | iex</code>
+                                <button class="copy-btn" onclick="copyToClipboard('cmd-win-install')"><i data-lucide="copy"></i></button>
+                            </div>
+                            <h3>Uninstall</h3>
+                            <p>Untuk menghapus game, jalankan perintah ini di PowerShell:</p>
+                            <div class="code-block">
+                                <code id="cmd-win-uninstall">irm https://sambungkata.sakum.my.id/app/uninstall/uninstall.ps1 | iex</code>
+                                <button class="copy-btn" onclick="copyToClipboard('cmd-win-uninstall')"><i data-lucide="copy"></i></button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="tutorial-step">
-                    <div class="step-icon">2</div>
-                    <div class="step-content">
-                        <h3>Linux</h3>
-                        <p>Buka terminal di folder download, lalu jalankan perintah berikut:</p>
-                        <pre><code>chmod +x install.sh
-./install.sh</code></pre>
-                        <p><small>*Gunakan <code>sudo</code> jika instalasi membutuhkan akses sistem.</small></p>
+
+                <!-- Linux -->
+                <div id="linux" class="tab-content">
+                    <div class="tutorial-step">
+                        <div class="step-content">
+                            <h3>Install</h3>
+                            <p>Buka terminal, lalu jalankan perintah berikut:</p>
+                            <div class="code-block">
+                                <code id="cmd-linux-install">curl -sSL https://sambungkata.sakum.my.id/app/installer/install.sh | bash</code>
+                                <button class="copy-btn" onclick="copyToClipboard('cmd-linux-install')"><i data-lucide="copy"></i></button>
+                            </div>
+                            <h3>Uninstall</h3>
+                            <p>Untuk menghapus game, jalankan perintah ini di terminal:</p>
+                            <div class="code-block">
+                                <code id="cmd-linux-uninstall">curl -sSL https://sambungkata.sakum.my.id/app/uninstall/uninstall.sh | bash</code>
+                                <button class="copy-btn" onclick="copyToClipboard('cmd-linux-uninstall')"><i data-lucide="copy"></i></button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="tutorial-step">
-                    <div class="step-icon">3</div>
-                    <div class="step-content">
-                        <h3>Android</h3>
-                        <p>Buka file APK yang sudah didownload. Jika muncul peringatan, aktifkan izin <strong>"Install dari Sumber Tidak Dikenal"</strong> di pengaturan HP kamu.</p>
+
+                <!-- Android -->
+                <div id="android" class="tab-content">
+                    <div class="tutorial-step">
+                        <div class="step-content">
+                            <h3>Install APK</h3>
+                            <p>Buka file APK yang sudah didownload. Jika muncul peringatan, aktifkan izin <strong>"Install dari Sumber Tidak Dikenal"</strong> di pengaturan HP kamu.</p>
+                            <h3>Uninstall</h3>
+                            <p>Tekan lama pada ikon aplikasi Sambung Kata di menu HP kamu, lalu pilih <strong>Uninstall</strong>.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -127,6 +160,6 @@
         </div>
     </footer>
 
-    <script src="js/script.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

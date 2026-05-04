@@ -12,6 +12,19 @@ set "ICON_URL=%BASE_URL%/app/iconapp/icon.png"
 set "INSTALL_DIR=%USERPROFILE%\sambung_kata"
 set "APP_NAME=Sambung Kata"
 
+:: Check if already installed
+if exist "%INSTALL_DIR%" (
+    echo Peringatan: Sambung Kata sudah terinstall di %INSTALL_DIR%
+    set /p choice="Apakah Anda ingin menghapus versi lama dan menginstall ulang? (y/n): "
+    if /i not "%choice%"=="y" (
+        echo Instalasi dibatalkan.
+        pause
+        exit /b 0
+    )
+    echo Menghapus versi lama...
+    rd /s /q "%INSTALL_DIR%"
+)
+
 if not exist "%INSTALL_DIR%" mkdir "%INSTALL_DIR%"
 cd /d "%INSTALL_DIR%"
 

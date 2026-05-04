@@ -12,6 +12,16 @@ ICON_URL="$BASE_URL/app/iconapp/icon.png"
 INSTALL_DIR="$HOME/sambung_kata"
 APP_NAME="Sambung Kata"
 
+# Check if already installed
+if [ -d "$INSTALL_DIR" ]; then
+    echo "Peringatan: Sambung Kata sudah terinstall di $INSTALL_DIR"
+    read -p "Apakah Anda ingin menghapus versi lama dan menginstall ulang? (y/n): " choice
+    case "$choice" in 
+      y|Y ) echo "Menghapus versi lama..."; rm -rf "$INSTALL_DIR";;
+      * ) echo "Instalasi dibatalkan."; exit 0;;
+    esac
+fi
+
 # Create installation directory
 echo "Creating installation directory at $INSTALL_DIR..."
 mkdir -p "$INSTALL_DIR"
@@ -43,8 +53,6 @@ chmod +x -R .
 echo "Creating desktop shortcut..."
 DESKTOP_FILE="$HOME/.local/share/applications/sambungkata.desktop"
 
-# We assume the binary name is 'sambung_kata' inside the bundle
-# If the path is different (e.g. bundle/sambung_kata), the Exec line should reflect that
 cat <<EOF > "$DESKTOP_FILE"
 [Desktop Entry]
 Name=$APP_NAME
