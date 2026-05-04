@@ -1,0 +1,8 @@
+{
+  "version": "1.5.3",
+  "build_number": 1,
+  "changelog": "• Penambahan sistem skor baru\n• AI sekarang lebih manusiawi (Bisa bingung & Typo)\n• Perbaikan bug di Lobby\n• Sistem Update Otomatis (Native Windows, Linux, Android)\n• Perbaikan sistem distribusi & installer",
+  "android_url": "https://sambungkata.sakum.my.id/app/android/app-release.apk",
+  "linux_url": "https://sambungkata.sakum.my.id/app/linux/bundle.zip",
+  "windows_url": "https://sambungkata.sakum.my.id/app/windows/game-sambung-kata-windows.zip"
+}

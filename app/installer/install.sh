@@ -56,7 +56,7 @@ DESKTOP_FILE="$HOME/.local/share/applications/sambungkata.desktop"
 cat <<EOF > "$DESKTOP_FILE"
 [Desktop Entry]
 Name=$APP_NAME
-Exec=$INSTALL_DIR/bundle/game_sambung_kata
+Exec=$INSTALL_DIR/game_sambung_kata
 Icon=$INSTALL_DIR/icon.png
 Type=Application
 Categories=Game;

@@ -41,7 +41,7 @@ Write-Host "Creating Desktop Shortcut..."
 $ShortcutPath = "$HOME\Desktop\$APP_NAME.lnk"
 $WshShell = New-Object -ComObject WScript.Shell
 $Shortcut = $WshShell.CreateShortcut($ShortcutPath)
-$Shortcut.TargetPath = "$INSTALL_DIR\bundle\game_sambung_kata.exe"
+$Shortcut.TargetPath = "$INSTALL_DIR\game_sambung_kata.exe"
 $Shortcut.WorkingDirectory = $INSTALL_DIR
 $Shortcut.IconLocation = "$INSTALL_DIR\icon.png"
 $Shortcut.Save()
