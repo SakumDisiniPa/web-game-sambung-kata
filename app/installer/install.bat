@@ -40,7 +40,7 @@ del bundle.zip
 
 echo Creating Desktop Shortcut...
 set "SHORTCUT_PATH=%USERPROFILE%\Desktop\%APP_NAME%.lnk"
-set "EXE_PATH=%INSTALL_DIR%\bundle\sambung_kata.exe"
+set "EXE_PATH=%INSTALL_DIR%\bundle\game_sambung_kata.exe"
 
 powershell -Command "$s=(New-Object -COM WScript.Shell).CreateShortcut('%SHORTCUT_PATH%');$s.TargetPath='%EXE_PATH%';$s.WorkingDirectory='%INSTALL_DIR%';$s.IconLocation='%INSTALL_DIR%\icon.png';$s.Save()"
 

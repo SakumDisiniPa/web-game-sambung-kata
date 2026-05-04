@@ -8,7 +8,7 @@ echo "======================================"
 INSTALL_DIR="$HOME/sambung_kata"
 DESKTOP_FILE="$HOME/.local/share/applications/sambungkata.desktop"
 
-read -p "Apakah Anda yakin ingin menghapus Sambung Kata? (y/n): " confirm
+read -p "Apakah Anda yakin ingin menghapus Sambung Kata? (y/n): " confirm < /dev/tty
 if [[ $confirm == [yY] ]]; then
     echo "Menghapus file aplikasi..."
     rm -rf "$INSTALL_DIR"

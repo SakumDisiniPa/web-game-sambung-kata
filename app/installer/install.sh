@@ -15,7 +15,7 @@ APP_NAME="Sambung Kata"
 # Check if already installed
 if [ -d "$INSTALL_DIR" ]; then
     echo "Peringatan: Sambung Kata sudah terinstall di $INSTALL_DIR"
-    read -p "Apakah Anda ingin menghapus versi lama dan menginstall ulang? (y/n): " choice
+    read -p "Apakah Anda ingin menghapus versi lama dan menginstall ulang? (y/n): " choice < /dev/tty
     case "$choice" in 
       y|Y ) echo "Menghapus versi lama..."; rm -rf "$INSTALL_DIR";;
       * ) echo "Instalasi dibatalkan."; exit 0;;
@@ -56,7 +56,7 @@ DESKTOP_FILE="$HOME/.local/share/applications/sambungkata.desktop"
 cat <<EOF > "$DESKTOP_FILE"
 [Desktop Entry]
 Name=$APP_NAME
-Exec=$INSTALL_DIR/bundle/sambung_kata
+Exec=$INSTALL_DIR/bundle/game_sambung_kata
 Icon=$INSTALL_DIR/icon.png
 Type=Application
 Categories=Game;
