@@ -1,0 +1,64 @@
+#!/bin/bash
+
+# Sambung Kata Installer for Linux
+echo "======================================"
+echo "Installing Sambung Kata..."
+echo "======================================"
+
+# Configuration
+BASE_URL="https://sambungkata.sakum.my.id"
+ZIP_URL="$BASE_URL/app/linux/bundle.zip"
+ICON_URL="$BASE_URL/app/iconapp/icon.png"
+INSTALL_DIR="$HOME/sambung_kata"
+APP_NAME="Sambung Kata"
+
+# Create installation directory
+echo "Creating installation directory at $INSTALL_DIR..."
+mkdir -p "$INSTALL_DIR"
+cd "$INSTALL_DIR" || exit
+
+# Download Icon
+echo "Downloading icon..."
+curl -L -s "$ICON_URL" -o "icon.png"
+
+# Download Bundle
+echo "Downloading game files (this may take a while)..."
+curl -L "$ZIP_URL" -o "bundle.zip"
+
+# Unzip
+echo "Extracting files..."
+if command -v unzip >/dev/null; then
+    unzip -o "bundle.zip"
+else
+    echo "Error: 'unzip' is not installed. Please install it first (sudo apt install unzip)."
+    exit 1
+fi
+rm "bundle.zip"
+
+# Make binaries executable
+echo "Setting permissions..."
+chmod +x -R .
+
+# Create Desktop Entry
+echo "Creating desktop shortcut..."
+DESKTOP_FILE="$HOME/.local/share/applications/sambungkata.desktop"
+
+# We assume the binary name is 'sambung_kata' inside the bundle
+# If the path is different (e.g. bundle/sambung_kata), the Exec line should reflect that
+cat <<EOF > "$DESKTOP_FILE"
+[Desktop Entry]
+Name=$APP_NAME
+Exec=$INSTALL_DIR/bundle/sambung_kata
+Icon=$INSTALL_DIR/icon.png
+Type=Application
+Categories=Game;
+Terminal=false
+Comment=Game Sambung Kata Multiplayer
+EOF
+
+chmod +x "$DESKTOP_FILE"
+
+echo "======================================"
+echo "Installation complete!"
+echo "You can find $APP_NAME in your apps menu."
+echo "======================================"

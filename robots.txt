@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sambungkata.sakum.my.id/sitemap.xml
