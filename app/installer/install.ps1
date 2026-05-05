@@ -5,9 +5,8 @@ Write-Host "======================================" -ForegroundColor Cyan
 Write-Host "Installing Sambung Kata..." -ForegroundColor Cyan
 Write-Host "======================================" -ForegroundColor Cyan
 
-$BASE_URL = "https://sambungkata.sakum.my.id"
-$ZIP_URL = "$BASE_URL/app/windows/bundle.zip"
-$ICON_URL = "$BASE_URL/app/iconapp/icon.png"
+$ZIP_URL = "https://github.com/SakumDisiniPa/web-game-sambung-kata/releases/download/v1.6.4/game-sambung-kata-windows.zip"
+$ICON_URL = "https://sambungkata.sakum.my.id/app/iconapp/icon.png"
 $INSTALL_DIR = "$HOME\sambung_kata"
 $APP_NAME = "Sambung Kata"
 
@@ -31,11 +30,11 @@ Write-Host "Downloading icon..."
 Invoke-WebRequest -Uri $ICON_URL -OutFile "icon.png"
 
 Write-Host "Downloading game files..."
-Invoke-WebRequest -Uri $ZIP_URL -OutFile "bundle.zip"
+Invoke-WebRequest -Uri $ZIP_URL -OutFile "game-sambung-kata-windows.zip"
 
 Write-Host "Extracting files..."
-Expand-Archive -Path "bundle.zip" -DestinationPath "." -Force
-Remove-Item -Path "bundle.zip"
+Expand-Archive -Path "game-sambung-kata-windows.zip" -DestinationPath "." -Force
+Remove-Item -Path "game-sambung-kata-windows.zip"
 
 Write-Host "Creating Desktop Shortcut..."
 $ShortcutPath = "$HOME\Desktop\$APP_NAME.lnk"

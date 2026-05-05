@@ -6,9 +6,8 @@ echo ======================================
 echo Installing Sambung Kata for Windows...
 echo ======================================
 
-set "BASE_URL=https://sambungkata.sakum.my.id"
-set "ZIP_URL=%BASE_URL%/app/windows/bundle.zip"
-set "ICON_URL=%BASE_URL%/app/iconapp/icon.png"
+set "ZIP_URL=https://github.com/SakumDisiniPa/web-game-sambung-kata/releases/download/v1.6.4/game-sambung-kata-windows.zip"
+set "ICON_URL=https://sambungkata.sakum.my.id/app/iconapp/icon.png"
 set "INSTALL_DIR=%USERPROFILE%\sambung_kata"
 set "APP_NAME=Sambung Kata"
 
@@ -32,11 +31,11 @@ echo Downloading icon...
 powershell -Command "Invoke-WebRequest -Uri '%ICON_URL%' -OutFile 'icon.png'"
 
 echo Downloading game files...
-powershell -Command "Invoke-WebRequest -Uri '%ZIP_URL%' -OutFile 'bundle.zip'"
+powershell -Command "Invoke-WebRequest -Uri '%ZIP_URL%' -OutFile 'game-sambung-kata-windows.zip'"
 
 echo Extracting files...
-powershell -Command "Expand-Archive -Path 'bundle.zip' -DestinationPath '.' -Force"
-del bundle.zip
+powershell -Command "Expand-Archive -Path 'game-sambung-kata-windows.zip' -DestinationPath '.' -Force"
+del game-sambung-kata-windows.zip
 
 echo Creating Desktop Shortcut...
 set "SHORTCUT_PATH=%USERPROFILE%\Desktop\%APP_NAME%.lnk"

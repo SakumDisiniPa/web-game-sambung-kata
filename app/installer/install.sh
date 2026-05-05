@@ -6,9 +6,8 @@ echo "Installing Sambung Kata..."
 echo "======================================"
 
 # Configuration
-BASE_URL="https://sambungkata.sakum.my.id"
-ZIP_URL="$BASE_URL/app/linux/bundle.zip"
-ICON_URL="$BASE_URL/app/iconapp/icon.png"
+ZIP_URL="https://github.com/SakumDisiniPa/web-game-sambung-kata/releases/download/v1.6.4/bundle.zip"
+ICON_URL="https://sambungkata.sakum.my.id/app/iconapp/icon.png"
 INSTALL_DIR="$HOME/sambung_kata"
 APP_NAME="Sambung Kata"
 
