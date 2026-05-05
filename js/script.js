@@ -3,7 +3,7 @@ const downloadData = [
     {
         name: "Android",
         description: "Mainkan di smartphone kamu.",
-        file: "https://github.com/SakumDisiniPa/game-sambung-kata/releases/download/V1.6.4/app-release.apk",
+        file: "https://github.com/SakumDisiniPa/game-sambung-kata/releases/download/V1.7.0/app-release.apk",
         icon: "assets/android.png",
         btnText: "Download APK",
         type: "android"
