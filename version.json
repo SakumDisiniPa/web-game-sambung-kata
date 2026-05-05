@@ -1,13 +1,9 @@
 {
   "version": "1.7.0+1",
   "build_number": 1,
-  "release_date": "2026-05-06",
-  "description": "Global Online Edition - Mabar Online bareng teman dari mana saja!",
-  "features": [
-    "Online Multiplayer via VPS Relay",
-    "Cloudflare Tunnel Integration",
-    "Custom Virtual Keyboard for Mobile",
-    "Portrait Mode Optimization",
-    "Custom App Icon"
-  ]
+  "changelog": "• Global Online Edition - Mabar Online bareng teman dari mana saja!\n• Online Multiplayer via VPS Relay\n• Cloudflare Tunnel Integration\n• Custom Virtual Keyboard for Mobile\n• Portrait Mode Optimization\n• Custom App Icon",
+  "android_url": "https://github.com/SakumDisiniPa/game-sambung-kata/releases/download/V1.7.0/app-release.apk",
+  "linux_url": "https://github.com/SakumDisiniPa/game-sambung-kata/releases/download/V1.7.0/bundle.zip",
+  "windows_url": "https://github.com/SakumDisiniPa/game-sambung-kata/releases/download/V1.7.0/game-sambung-kata-windows.zip"
 }
+
