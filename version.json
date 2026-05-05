@@ -2,7 +2,7 @@
   "version": "1.6.4",
   "build_number": 1,
   "changelog": "• Music Player In-Game dengan Playlist Random\n• Efek suara ketikan mesin tik (Typing SFX)\n• AI cerdas yang tidak lagi mengulang awalan kata\n• Perbaikan Race Condition pada timer giliran\n• Visual Feedback warna (Hijau/Merah) yang lebih intuitif\n• Sinkronisasi Skor Tertinggi secara Real-time",
-  "android_url": "https://github.com/SakumDisiniPa/web-game-sambung-kata/releases/download/v1.6.4/app-release.apk",
-  "linux_url": "https://github.com/SakumDisiniPa/web-game-sambung-kata/releases/download/v1.6.4/bundle.zip",
-  "windows_url": "https://github.com/SakumDisiniPa/web-game-sambung-kata/releases/download/v1.6.4/game-sambung-kata-windows.zip"
+  "android_url": "https://github.com/SakumDisiniPa/game-sambung-kata/releases/download/V1.6.4/app-release.apk",
+  "linux_url": "https://github.com/SakumDisiniPa/game-sambung-kata/releases/download/V1.6.4/bundle.zip",
+  "windows_url": "https://github.com/SakumDisiniPa/game-sambung-kata/releases/download/V1.6.4/game-sambung-kata-windows.zip"
 }

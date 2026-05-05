@@ -6,7 +6,7 @@ echo ======================================
 echo Installing Sambung Kata for Windows...
 echo ======================================
 
-set "ZIP_URL=https://github.com/SakumDisiniPa/web-game-sambung-kata/releases/download/v1.6.4/game-sambung-kata-windows.zip"
+set "ZIP_URL=https://github.com/SakumDisiniPa/game-sambung-kata/releases/download/V1.6.4/game-sambung-kata-windows.zip"
 set "ICON_URL=https://sambungkata.sakum.my.id/app/iconapp/icon.png"
 set "INSTALL_DIR=%USERPROFILE%\sambung_kata"
 set "APP_NAME=Sambung Kata"

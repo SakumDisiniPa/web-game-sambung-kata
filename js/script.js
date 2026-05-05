@@ -3,7 +3,7 @@ const downloadData = [
     {
         name: "Android",
         description: "Mainkan di smartphone kamu.",
-        file: "https://github.com/SakumDisiniPa/web-game-sambung-kata/releases/download/v1.6.4/app-release.apk",
+        file: "https://github.com/SakumDisiniPa/game-sambung-kata/releases/download/V1.6.4/app-release.apk",
         icon: "assets/android.png",
         btnText: "Download APK",
         type: "android"
@@ -27,7 +27,7 @@ const downloadData = [
     {
         name: "Source Code",
         description: "Lihat kode sumber di GitHub.",
-        file: "https://github.com/SakumDisiniPa/web-game-sambung-kata",
+        file: "https://github.com/SakumDisiniPa/game-sambung-kata",
         icon: "assets/github.png",
         btnText: "View on GitHub",
         type: "github"
