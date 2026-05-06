@@ -5,7 +5,7 @@ Write-Host "======================================" -ForegroundColor Cyan
 Write-Host "Installing Sambung Kata..." -ForegroundColor Cyan
 Write-Host "======================================" -ForegroundColor Cyan
 
-$ZIP_URL = "https://github.com/SakumDisiniPa/game-sambung-kata/releases/download/V1.7.0/game-sambung-kata-windows.zip"
+$ZIP_URL = "https://github.com/SakumDisiniPa/game-sambung-kata/releases/download/v1.8.0/game-sambung-kata-windows.zip"
 $ICON_URL = "https://sambungkata.sakum.my.id/app/iconapp/icon.png"
 $INSTALL_DIR = "$HOME\sambung_kata"
 $APP_NAME = "Sambung Kata"

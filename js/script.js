@@ -1,9 +1,16 @@
-// Data untuk platform download
 const downloadData = [
+    {
+        name: "Web Browser",
+        description: "Main langsung tanpa install.",
+        file: "https://play.sambungkata.sakum.my.id",
+        icon: "assets/web.png",
+        btnText: "Main Sekarang",
+        type: "web"
+    },
     {
         name: "Android",
         description: "Mainkan di smartphone kamu.",
-        file: "https://github.com/SakumDisiniPa/game-sambung-kata/releases/download/V1.7.0/app-release.apk",
+        file: "https://github.com/SakumDisiniPa/game-sambung-kata/releases/download/v1.8.0/app-release.apk",
         icon: "assets/android.png",
         btnText: "Download APK",
         type: "android"
@@ -23,14 +30,6 @@ const downloadData = [
         icon: "assets/linux.png",
         btnText: "Download Installer",
         type: "linux"
-    },
-    {
-        name: "Source Code",
-        description: "Lihat kode sumber di GitHub.",
-        file: "https://github.com/SakumDisiniPa/game-sambung-kata",
-        icon: "assets/github.png",
-        btnText: "View on GitHub",
-        type: "github"
     }
 ];
 

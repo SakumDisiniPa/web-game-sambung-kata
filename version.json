@@ -1,9 +1,8 @@
 {
-  "version": "1.7.0+1",
-  "build_number": 1,
-  "changelog": "• Global Online Edition - Mabar Online bareng teman dari mana saja!\n• Online Multiplayer via VPS Relay\n• Cloudflare Tunnel Integration\n• Custom Virtual Keyboard for Mobile\n• Portrait Mode Optimization\n• Custom App Icon",
-  "android_url": "https://github.com/SakumDisiniPa/game-sambung-kata/releases/download/V1.7.0/app-release.apk",
-  "linux_url": "https://github.com/SakumDisiniPa/game-sambung-kata/releases/download/V1.7.0/bundle.zip",
-  "windows_url": "https://github.com/SakumDisiniPa/game-sambung-kata/releases/download/V1.7.0/game-sambung-kata-windows.zip"
+  "version": "1.8.0+1",
+  "build_number": 2,
+  "changelog": "• Anti-Cheat Disconnect - Pemain yang kabur otomatis dieliminasi & lawan menang instan\n• Smart Room ID - Host otomatis buat kode 4 digit acak\n• Deep Link & Invitations - Share link undangan langsung masuk room\n• Web-Play Support - Main langsung di browser tanpa install via play subdomain\n• Hybrid Storage - Sinkronisasi data aman di Android, Windows, Linux, dan Web\n• Real-time Identity - Profil & Leaderboard tersinkron otomatis setiap beres main",
+  "android_url": "https://github.com/SakumDisiniPa/game-sambung-kata/releases/download/v1.8.0/app-release.apk",
+  "linux_url": "https://github.com/SakumDisiniPa/game-sambung-kata/releases/download/v1.8.0/game-sambung-kata-linux.zip",
+  "windows_url": "https://github.com/SakumDisiniPa/game-sambung-kata/releases/download/v1.8.0/game-sambung-kata-windows.zip"
 }
-

@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sambung Kata Sakum - Game Asah Otak & Multiplayer Lokal | SAKUM STUDIOS</title>
-    <meta name="description" content="Download Sambung Kata Sakum, game asah otak multiplayer lokal paling seru dari SAKUM STUDIOS. Main bareng teman dalam satu WiFi di Android, Windows, dan Linux!">
-    <meta name="keywords" content="sakum game sambung kata, sakum game, sakum studios game, sambung kata sakum, sambung kata, game kata, multiplayer lokal, game android, game windows, game linux, asah otak">
+    <title>Sambung Kata Sakum - Game Asah Otak & Online Multiplayer Global | SAKUM STUDIOS</title>
+    <meta name="description" content="Download Sambung Kata Sakum, game asah otak online multiplayer global paling seru dari SAKUM STUDIOS. Main bareng teman dari mana saja di Android, Windows, dan Linux!">
+    <meta name="keywords" content="sakum game sambung kata, sakum game, online multiplayer, global game, sambung kata sakum, sambung kata, game kata, game android, game windows, game linux, asah otak">
     <meta name="author" content="SAKUM STUDIOS">
     
     <!-- Favicon -->
@@ -14,15 +14,15 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://sambungkata.sakum.my.id/">
-    <meta property="og:title" content="Sambung Kata Sakum - Game Asah Otak & Multiplayer Lokal">
-    <meta property="og:description" content="Main bareng teman dalam satu jaringan WiFi. Download sekarang dari SAKUM STUDIOS!">
+    <meta property="og:title" content="Sambung Kata Sakum - Game Asah Otak & Online Multiplayer Global">
+    <meta property="og:description" content="Main bareng teman dari mana saja di seluruh dunia. Download sekarang dari SAKUM STUDIOS!">
     <meta property="og:image" content="https://sambungkata.sakum.my.id/assets/logo.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://sambungkata.sakum.my.id/">
-    <meta property="twitter:title" content="Sambung Kata Sakum - Game Asah Otak & Multiplayer Lokal">
-    <meta property="twitter:description" content="Main bareng teman dalam satu jaringan WiFi. Download sekarang dari SAKUM STUDIOS!">
+    <meta property="twitter:title" content="Sambung Kata Sakum - Game Asah Otak & Online Multiplayer Global">
+    <meta property="twitter:description" content="Main bareng teman dari mana saja di seluruh dunia. Download sekarang dari SAKUM STUDIOS!">
     <meta property="twitter:image" content="https://sambungkata.sakum.my.id/assets/logo.png">
 
     <link rel="stylesheet" href="css/style.min.css">
@@ -56,8 +56,8 @@
                 <h1 class="animate-text">Sambungkan Kata, <br><span class="gradient-text">Uji Kreativitasmu!</span></h1>
                 <p class="hero-description">Game kata-kata paling menantang dari SAKUM STUDIOS. Tersedia untuk semua platform favoritmu.</p>
                 <div class="hero-buttons">
-                    <a href="#download" class="btn btn-primary">Download Sekarang</a>
-                    <a href="#features" class="btn btn-secondary">Pelajari Lebih Lanjut</a>
+                    <a href="https://play.sambungkata.sakum.my.id" class="btn btn-primary" target="_blank">Main di Web</a>
+                    <a href="#download" class="btn btn-secondary">Download Game</a>
                 </div>
             </div>
             <div class="hero-image">
@@ -74,9 +74,9 @@
                     <p>Performa maksimal tanpa membebani perangkatmu.</p>
                 </div>
                 <div class="feature-card">
-                    <i data-lucide="wifi"></i>
-                    <h3>Local Multiplayer</h3>
-                    <p>Main bareng teman dalam satu jaringan WiFi yang sama dengan mudah.</p>
+                    <i data-lucide="globe"></i>
+                    <h3>Online Multiplayer</h3>
+                    <p>Main bareng teman dari mana saja di seluruh dunia hanya dengan kode room 4 digit.</p>
                 </div>
                 <div class="feature-card">
                     <i data-lucide="layout"></i>
@@ -164,5 +164,77 @@
     </footer>
 
     <script src="js/script.js"></script>
+
+    <!-- Invitation Modal -->
+    <div id="invite-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <i data-lucide="mail-open" class="invite-icon"></i>
+                <h2>Undangan Bermain!</h2>
+            </div>
+            <p>Kamu diundang untuk bergabung ke permainan Sambung Kata.</p>
+            <div class="room-code-display">
+                <span>KODE ROOM</span>
+                <strong id="display-room-id">----</strong>
+            </div>
+            <div class="modal-buttons">
+                <button id="open-app-btn" class="btn btn-primary">BUKA APLIKASI</button>
+                <a href="#download" class="btn btn-secondary" onclick="document.getElementById('invite-modal').style.display='none'">DOWNLOAD APK</a>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .modal {
+            position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%;
+            background-color: rgba(0,0,0,0.85); backdrop-filter: blur(8px);
+            display: flex; align-items: center; justify-content: center;
+        }
+        .modal-content {
+            background: #1a1a1a; padding: 40px; border-radius: 30px;
+            text-align: center; border: 1px solid #00ffff; max-width: 400px; width: 90%;
+            box-shadow: 0 0 50px rgba(0, 255, 255, 0.2);
+        }
+        .invite-icon { color: #00ffff; width: 60px; height: 60px; margin-bottom: 20px; }
+        .room-code-display {
+            background: #222; padding: 20px; border-radius: 15px; margin: 25px 0;
+            border: 1px dashed #00ffff;
+        }
+        .room-code-display span { display: block; font-size: 10px; color: #555; letter-spacing: 2px; }
+        .room-code-display strong { font-size: 36px; color: #00ffff; letter-spacing: 10px; }
+        .modal-header h2 { color: white; margin: 0; }
+        .modal-content p { color: #aaa; margin-top: 10px; }
+        /* Tambahan style biar rapi */
+        .btn-text { background: none; border: none; cursor: pointer; text-decoration: underline; }
+        .modal-buttons { display: flex; flex-direction: column; gap: 10px; }
+    </style>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const path = window.location.pathname;
+            // Deteksi link format /join/1234
+            const joinMatch = path.match(/\/join\/(\d{4})/);
+            
+            if (joinMatch) {
+                const roomId = joinMatch[1];
+                document.getElementById('display-room-id').innerText = roomId;
+                document.getElementById('invite-modal').style.display = 'flex';
+                
+                // 1. Buka Aplikasi (Mobile App)
+                document.getElementById('open-app-btn').addEventListener('click', () => {
+                    window.location.href = `sambungkata://join/${roomId}`;
+                    // Jika dalam 2 detik tidak pindah aplikasi, mungkin aplikasi belum diinstall
+                    setTimeout(() => {
+                        alert("Jika tidak terbuka, pastikan aplikasi sudah terinstall!");
+                    }, 2000);
+                });
+
+                // 2. Main di Web (Pindah ke subdomain play)
+                document.getElementById('open-web-btn').addEventListener('click', () => {
+                    window.location.href = `https://play.sambungkata.sakum.my.id/?join=${roomId}`;
+                });
+            }
+        });
+    </script>
 </body>
 </html>

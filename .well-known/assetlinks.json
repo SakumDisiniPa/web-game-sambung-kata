@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.sakum.my.id",
+      "sha256_cert_fingerprints": [
+        "20:20:CE:05:21:55:F1:C8:38:42:73:A8:A7:21:C7:91:E0:45:C6:E0:E3:69:76:38:26:9C:14:0D:8F:DF:96:FA"
+      ]
+    }
+  }
+]
